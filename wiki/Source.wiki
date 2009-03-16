@@ -4,30 +4,36 @@
 
 You can build torora in a number of ways:
 
-# Basic Torora build
-# Using the webkit patch in the source (allows use of javascript)
-# An Arora-like browser with Tor browsing as an option you can toggle.
+  # Basic Torora build
+  # Using the webkit patch in the source (allows use of javascript)
+  # An Arora-like browser with Tor browsing as an option you can toggle.
+
+You can browse the source at [http://github.com/mwenge/torora/tree/master github].
 
 = Details =
 
-Simple steps to build Torora:
+== Simple steps to build Torora: ==
 
-    $ git clone git://github.com/mwenge/torora.git
-    $ cd torora
-    $ qmake "CONFIG-=debug DEFINES+=TORORA" -r
-    $ make
+{{{
+  $ git clone git://github.com/mwenge/torora.git
+  $ cd torora
+  $ qmake "CONFIG-=debug DEFINES+=TORORA" -r
+  $ make
+}}}
 
---
-To build Torora against a patched webkit (see webkit-patch.spec):
+== To build Torora against a patched webkit (see [http://github.com/mwenge/torora/blob/23d764a4967ce93716a65b7b4a0656616ba3bfe4/doc/webkit-patch.spec webkit-patch.spec]): ==
 
-  Patch webkit:
+  === Patch webkit: ===
+{{{
     $ cd ~
     $ svn checkout http://svn.webkit.org/repository/webkit/trunk $HOME/WebKit
     $ cd $HOME/WebKit
     $ patch -p0 < /location/of/torora/doc/webkit-svn.patch
     $ ./WebKitTools/Scripts/build-webkit --qt --release
+}}}
 
-  Build Torora:
+  === Build Torora: ===
+{{{
     $ git clone git://github.com/mwenge/torora.git
     $ cd /path/to/torora/source
     $ cd torora
@@ -37,11 +43,13 @@ To build Torora against a patched webkit (see webkit-patch.spec):
     $ qmake "CONFIG-=debug" "DEFINES+=TORORA" "DEFINES+=TORORA_WEBKIT_BUILD" -r
     $ make clean
     $ make
+}}}
 
---
-To build an arora-like with a 'Tor Browsing' toggle option:
+== To build an arora-like with a 'Tor Browsing' toggle option: == 
 
+{{{
     $ git clone git://github.com/mwenge/torora.git
     $ cd torora
     $ qmake "CONFIG-=debug" -r
     $ make
+}}}
