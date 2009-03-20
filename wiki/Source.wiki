@@ -8,7 +8,7 @@
     $ make
 }}}
 
-== To build Torora against a patched webkit (see webkit-patch.spec): ==
+== To build Torora against a patched webkit (see [http://github.com/mwenge/torora/blob/23d764a4967ce93716a65b7b4a0656616ba3bfe4/doc/webkit-patch.spec webkit-patch.spec]): ==
 
 === Patch webkit: ===
 {{{
