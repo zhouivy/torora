@@ -1,4 +1,11 @@
-#summary One-sentence summary of this page.
+#summary Building Torora from source.
+
+== Requirements ==
+
+Qt 4.5 or later is a strict requirement for building Torora. This is because only Qt 4.5
+and greater support HTTP/HTTPS proxying properly. <b> If you build Torora with versions
+of Qt prior to 4.5 you will find that HTTP browsing over Tor works fine, but HTTPS
+doesn't work at all. </b>
 
 == Simple steps to build Torora: ==
 {{{
