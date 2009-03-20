@@ -39,4 +39,3 @@
     $ qmake "CONFIG-=debug" -r
     $ make
 }}}
-S
