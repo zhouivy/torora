@@ -38,6 +38,36 @@ doesn't work at all. </b>
     $ make
 }}}
 
+=== Test/Troubleshoot: ===
+  * Ensure your Torora binary is built against the patched webkit:
+{{{
+robert@mwenge:~/Development/torora$ ldd torora
+        linux-gate.so.1 =>  (0xb7f39000)
+        libQtWebKit.so.4 => /home/robert/Development/WebKit/WebKitBuild/Debug/lib/libQtWebKit.so.4 (0xb5408000)
+}}}
+  * The file webkittrunk.pri applies the paths you select, if you built webkit with '--release' then ensure the appropriate section in webkittrunk.pri looks like:
+
+{{{
+    isEmpty(WEBKITBRANCH) {
+        CONFIG(debug):WEBKITBUILD = $$WEBKITDIR/WebKitBuild/Debug/lib
+        CONFIG(release):WEBKITBUILD = $$WEBKITDIR/WebKitBuild/Release/lib
+    } else {
+        CONFIG(debug):WEBKITBUILD = $$WEBKITDIR/WebKitBuild/$$WEBKITBRANCH/Debug/lib
+        CONFIG(release):WEBKITBUILD = $$WEBKITDIR/WebKitBuild/$$WEBKITBRANCH/Release/lib
+    }
+}}}
+
+  * If you built with '--debug' then it should be:
+{{{
+    isEmpty(WEBKITBRANCH) {
+        CONFIG(release):WEBKITBUILD = $$WEBKITDIR/WebKitBuild/Release/lib
+        CONFIG(debug):WEBKITBUILD = $$WEBKITDIR/WebKitBuild/Debug/lib
+    } else {
+        CONFIG(release):WEBKITBUILD = $$WEBKITDIR/WebKitBuild/$$WEBKITBRANCH/Release/lib
+        CONFIG(debug):WEBKITBUILD = $$WEBKITDIR/WebKitBuild/$$WEBKITBRANCH/Debug/lib
+    }
+}}}
+
 == To build an arora-like with a 'Tor Browsing' toggle option: == 
 
 {{{
