@@ -34,6 +34,12 @@
   # Start Visual C++ Express 2005
   # Click Tools->Visual C++ Command Prompt
   # cd c:\location\of\extracted\openssl
+  # I had to manually set the LIB, PATH, and INCLUDE variables in the Visual C++ 2005 command prompt so that `C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\XXX` was at the start of each environment variable again. Step 5 above should have taken care of this but Visual C++ 2005 must be stupid:
+{{{
+set PATH=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Bin;%PATH%
+set LIB=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Lib;%LIB%
+set INCLUDE=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\Include;%INCLUDE%
+}}}
   # Build from the Visual C++ command prompt:
 {{{
     openssl_source_directory> perl Configure VC-WIN32
@@ -43,6 +49,7 @@
 {{{
     openssl_source_directory> nmake -f ms\ntdll.mak
 }}}
+  # If you're lucky, OpenSSL will build without a hitch. If not, you may get a rash of exotic errors. Some errors will require a `nmake clean` to recover from. This didn't work for me, so I ended up having to delete the source folder and start from scratch once or twice.
 
 == Step 2: Fetch Torora Sources, Fetch and Patch Webkit ==
 
