@@ -79,23 +79,24 @@
 
   # Open up Qt Creator
   # Find the torora.pro file in your clone of the torora git repository and open it.
-  # The git repo contains a torora.pro.user which QT will use to set build environment variables. In order for the Torora build to pick up the patched webkit you built earlier and in order to build Torora with the proper configuration you will need to ensure that at least the following are set correctly in the 'Projects' section of QT Creator.
-  # In the list below `C:\users\robert\WebKit-SVN-source\webkit\WebKitBuild\Release\lib` is    the location of the patched Webkit build. It needs to come at the start of the PATH variable so that the patched webkit is picked up rather than the one that ships with your QT SDK. Also note the presence of the location of the OpenSSL libraries you built in Step 1: `C:\Users\robert\Documents\Development\openssl-0.9.8j\out32dll`
+  # The git repo contains a torora.pro.user which QT will use to set build environment variables. 
+  # Navigate to Projects->Build Settings->Release->Build Environment in QT Creator.
+    * In the list below `C:\users\robert\WebKit-SVN-source\webkit\WebKitBuild\Release\lib` is the location of the patched Webkit build. It needs to come at the start of the PATH variable (in Projects->Build Settings->Release->Build Environment) so that the patched webkit is picked up rather than the one that ships with your QT SDK. Also note the presence of the location of the OpenSSL libraries you built in Step 1: `C:\Users\robert\Documents\Development\openssl-0.9.8j\out32dll`
 {{{
-PATH=C:\users\robert\WebKit-SVN-source\webkit\WebKitBuild\Release\lib;c:\Qt\2009.01\mingw\bin;c:\Qt\2009.01\qt\bin;C:\Perl\site\bin;C:\Perl\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Program Files\Intel\DMIX;C:\Program Files\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files\Common Files\Roxio Shared\10.0\DLLShared\;C:\Program Files\Common Files\Roxio Shared\DLLShared\;C:\Program Files\Common Files\Roxio Shared\DLLShared\;C:\Program Files\Common Files\Roxio Shared\10.0\DLLShared\;C:\Program Files\TortoiseSVN\bin;C:\Program Files\Git\cmd;C:\Program Files\Git\bin;C:\Users\robert\Documents\Development\openssl-0.9.8j\out32dll
+PATH=C:\users\robert\WebKit-SVN-source\webkit\WebKitBuild\Release\lib;c:\Qt\2009.01\mingw\bin;c:\Qt\2009.01\qt\bin;C:\Users\robert\Documents\Development\openssl-0.9.8j\out32dll
 }}}
-  # Again, the location of your patched webkit build needs to preced the location of the QT SDK.
+    * Again, the location of your patched webkit build needs to precede the location of the QT SDK in the QTDIR variable.
 {{{
 QTDIR=C:\Users\robert\WebKit-SVN-source\webkit;C:/Qt/2009.01/qt
 }}}
-  # This is needed for building against the patched webkit build. 'C:\Users\robert\WebKit-SVN-source\webkit' is the location of the webkit svn repo you downloaded.
+    * This is needed for building against the patched webkit build. 'C:\Users\robert\WebKit-SVN-source\webkit' is the location of the webkit svn repo you downloaded.
 {{{
   QT_WEBKIT=webkit_trunk
   WEBKITDIR=C:\Users\robert\WebKit-SVN-source\webkit
 }}}
-  # In the projects section, click on the QMake item in the list. Add the following arguments for qmake to the existing list:
+  # Navigate to Projects->Build Settings->Release->Build Steps->Qmake in QT Creator. Change the 'additional arguments' for qmake to the existing list:
 {{{
-    DEFINES+=TORORA_WEBKIT_BUILD DEFINES+=TORORA
+    DEFINES+=TORORA_WEBKIT_BUILD DEFINES+=TORORA CONFIG-=DEBUG CONFIG+=RELEASE
 }}}
   # Click Build->Run Qmake
   # Click Build->Build All
