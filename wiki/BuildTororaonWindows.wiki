@@ -1,6 +1,6 @@
 #summary Building Torora on Windows
 
-= Install the following prerequisites first: =
+= You will need the following to perform this build: =
 
   # [http://go.microsoft.com/fwlink/?LinkId=51410 Visual C++ Express 2005]
   # [http://download.microsoft.com/download/7/7/3/7737290f-98e8-45bf-9075-85cc6ae34bf1/VS80sp1-KB926748-X86-INTL.exe Microsoft Visual C++ Express 2005 Service Pack 1]
@@ -24,13 +24,13 @@
 
 == Step 1: Build OpenSSl ==
 
-  # [http://go.microsoft.com/fwlink/?LinkId=51410 Visual C++ Express 2005]
-  # [http://download.microsoft.com/download/7/7/3/7737290f-98e8-45bf-9075-85cc6ae34bf1/VS80sp1-KB926748-X86-INTL.exe Microsoft Visual C++ Express 2005 Service Pack 1]
+  # [http://go.microsoft.com/fwlink/?LinkId=51410 Download Visual C++ Express 2005]
+  # [http://download.microsoft.com/download/7/7/3/7737290f-98e8-45bf-9075-85cc6ae34bf1/VS80sp1-KB926748-X86-INTL.exe Download Microsoft Visual C++ Express 2005 Service Pack 1]
   # [http://www.microsoft.com/downloads/details.aspx?FamilyID=90e2942d-3ad1-4873-a2ee-4acc0aace5b6&displaylang=en If you are building from Vista, install Service Pack 1 Update for Windows Vista.]
   # [http://www.microsoft.com/downloads/details.aspx?familyid=0baf2b35-c656-4969-ace8-e4c0c0716adb&displaylang=en Install the Windows Server 2003 R2 Platform SDK]
   # [http://msdn.microsoft.com/en-us/library/ms235626(VS.80).aspx Follow steps 2 and 3 of “How to: Use Visual C++ Express Edition with the Microsoft Platform SDK.]
-  # [http://www.activestate.com/store/download.aspx?prdGUID=81fbce82-6bd5-49bc-a915-08d58c2648ca ActivePerl]
-  # [http://www.openssl.org/source/ OpenSSl]
+  # [http://www.activestate.com/store/download.aspx?prdGUID=81fbce82-6bd5-49bc-a915-08d58c2648ca Download ActivePerl]
+  # [http://www.openssl.org/source/ Download OpenSSl]
   # Start Visual C++ Express 2005
   # Click Tools->Visual C++ Command Prompt
   # cd c:\location\of\extracted\openssl
@@ -62,11 +62,11 @@
 == Step 3: Build Patched Webkit ==
 
   # The following external GNU tools are needed from the GnuWin32 Project:
-   * [http://gnuwin32.sourceforge.net/downlinks/bison.php Bison]
-   * [http://gnuwin32.sourceforge.net/downlinks/gperf.php GPerf]
-   * [http://gnuwin32.sourceforge.net/downlinks/flex.php Flex]
+   * [http://gnuwin32.sourceforge.net/downlinks/bison.php Download Bison]
+   * [http://gnuwin32.sourceforge.net/downlinks/gperf.php Download GPerf]
+   * [http://gnuwin32.sourceforge.net/downlinks/flex.php Download Flex]
    * [http://gnuwin32.sourceforge.net/downlinks/libiconv.php LibIconv]
-  # [http://www.qtsoftware.com/downloads/sdk-windows-cpp QT SDK (and QT Creator)]
+  # [http://www.qtsoftware.com/downloads/sdk-windows-cpp Download QT SDK (and QT Creator)]
   # Make sure the GnuWin32 packages are in your PATH as well as Perl.
   # You also need to have %QTDIR% set and have %QTDIR%\bin in your PATH.
   # Open for example a Qt Command Prompt from the Start Menu. `Click Start->Program Files->Qt->QT Command Prompt`
