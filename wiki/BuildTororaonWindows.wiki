@@ -57,7 +57,7 @@ set INCLUDE=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\I
   # [http://subversion.tigris.org/getting.html#windows Download SVN for Windows]
   # [http://gnuwin32.sourceforge.net/downlinks/patch.php Download patch.exe for Windows]
   # Launch Git from the start menu.
-  # Make sure the GnuWin32 packages are in your PATH: `set PATH=C:\program files\gnuwin32;%PATH`:
+  # Make sure the GnuWin32 packages are in your PATH: `set PATH=C:\program files\gnuwin32\bin;%PATH%`:
 {{{
     $ cd $HOMEDIR
     $ git clone git://github.com/mwenge/torora.git
@@ -74,7 +74,7 @@ set INCLUDE=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\I
    * [http://gnuwin32.sourceforge.net/downlinks/flex.php Download Flex]
    * [http://gnuwin32.sourceforge.net/downlinks/libiconv.php LibIconv]
   # [http://www.qtsoftware.com/downloads/sdk-windows-cpp Download QT SDK (and QT Creator)]
-  # Make sure the GnuWin32 packages are in your PATH as well as Perl.
+  # Make sure the GnuWin32 packages are in your PATH as well as Perl (`set PATH=C:\program files\gnuwin32\bin;C:\Perl\site\bin;%PATH%`.
   # You also need to have %QTDIR% set and have %QTDIR%\bin in your PATH.
   # Open for example a Qt Command Prompt from the Start Menu. `Click Start->Program Files->Qt->QT Command Prompt`
   # Change into the WebKit source tree: `cd c:\location\of\webkit`
