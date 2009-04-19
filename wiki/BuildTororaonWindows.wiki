@@ -76,6 +76,7 @@ set INCLUDE=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\I
   # [http://www.qtsoftware.com/downloads/sdk-windows-cpp Download QT SDK (and QT Creator)]
   # Make sure the GnuWin32 packages are in your PATH as well as Perl (`set PATH=C:\program files\gnuwin32\bin;C:\Perl\site\bin;%PATH%`.
   # You also need to have %QTDIR% set and have %QTDIR%\bin in your PATH.
+  # Trim your PATH down as much as possible. Remove Git and Mingw from your PATH if you have them installed, their presence can cause odd build failures. For example, the PATH that works for me is `set Path=C:\Program Files\GnuWin32\bin;c:\Qt\2009.01\qt\bin;c:\Qt\2009.01\bin;C:\Perl\bin;C:\Windows\system32;c:\Qt\2009.01\mingw\bin;C:\Perl\site\bin;C:\Windows;C:\Program Files\SlikSvn\bin\`.
   # Open for example a Qt Command Prompt from the Start Menu. `Click Start->Program Files->Qt->QT Command Prompt`
   # Change into the WebKit source tree: `cd c:\location\of\webkit`
   # Build the patched webkit (release mode):
