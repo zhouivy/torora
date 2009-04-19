@@ -61,8 +61,8 @@ set INCLUDE=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\I
 {{{
     $ cd $HOMEDIR
     $ git clone git://github.com/mwenge/torora.git
-    $ svn checkout http://svn.webkit.org/repository/webkit/trunk $HOME/WebKit
-    $ cd $HOMEDIR/WebKit
+    $ svn checkout http://svn.webkit.org/repository/webkit/trunk %HOME%\WebKit
+    $ cd %HOME%/WebKit
     $ patch -p0 < ..\torora\doc\webkit-svn.patch
 }}}
 
