@@ -15,16 +15,19 @@ doesn't work at all. </b>
     $ make
 }}}
 
-== To build Torora against a patched webkit (see [http://github.com/mwenge/torora/blob/23d764a4967ce93716a65b7b4a0656616ba3bfe4/doc/webkit-patch.spec webkit-patch.spec]): ==
+== To build Torora against a patched webkit (see [http://github.com/mwenge/torora/tree/master/doc/webkit-patch.spec webkit-patch.spec] and [http://github.com/mwenge/torora/tree/master/doc/DESIGN.torora DESIGN.torora]): ==
 
 === Patch webkit: ===
 {{{
     $ cd ~
-    $ svn checkout http://svn.webkit.org/repository/webkit/trunk $HOME/WebKit
+    $ svn checkout -r 41182 http://svn.webkit.org/repository/webkit/trunk $HOME/WebKit
     $ cd $HOME/WebKit
-    $ patch -p0 < /location/of/torora/doc/webkit-svn.patch
+    $ patch -p0 < /location/of/torora/doc/webkit-Safari-4.1-beta.patch
     $ ./WebKitTools/Scripts/build-webkit --qt --release
 }}}
+
+Note: Revision 41182 is the revision tagged for the Safari 4 beta.
+
 === Build Torora: ===
 {{{
     $ git clone git://github.com/mwenge/torora.git
