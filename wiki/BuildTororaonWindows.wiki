@@ -75,7 +75,7 @@ set INCLUDE=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\I
    * [http://gnuwin32.sourceforge.net/downlinks/flex.php Download Flex]
    * [http://gnuwin32.sourceforge.net/downlinks/libiconv.php LibIconv]
    * [http://gnuwin32.sourceforge.net/downlinks/make.php Make]
-  # It is safest to install the gnuwin32 tools to `C:\GnuWin32` rather than `C:\Program Files\GnuWin32`. This is because, depending on your luck with the webkit build, the space in `Program Files` can prevent the windows shell from locating the binaries correctly. The error message below is what you will see if you get this problem.
+   It is safest to install the gnuwin32 tools to `C:\GnuWin32` rather than `C:\Program Files\GnuWin32`. This is because, depending on your luck with the webkit build, the space in `Program Files` can prevent the windows shell from locating the binaries correctly. The error message below is what you will see if you get this problem.
 {{{
 make[2]: Entering directory `C:/Users/robert/Development/webkit/WebKitBuild/Release/WebCore'
 bison -d -p jscyy ..\..\..\JavaScriptCore\parser\Grammar.y -o Grammar.tab.c && move Grammar.tab.c tmp\Grammar.cpp && move Grammar.tab.h tmp/Grammar.h
@@ -84,7 +84,6 @@ m4: cannot open `C:\Program': No such file or directory
 m4: cannot open `Files\GnuWin32/share/bison/m4sugar/m4sugar.m4': No such file or directory
 bison: I/O error
 }}}
-
   # [http://www.qtsoftware.com/downloads/sdk-windows-cpp Download QT SDK (and QT Creator)]
   # Make sure the GnuWin32 packages are in your PATH as well as Perl (`set PATH=C:\program files\gnuwin32\bin;C:\Perl\site\bin;%PATH%`.
   # You also need to have %QTDIR% set and have %QTDIR%\bin in your PATH.
@@ -95,7 +94,12 @@ bison: I/O error
   # You may need to do a `mkdir c:\tmp`. The WebKit build relies on the existence of `c:\tmp` when building in Windows.
   # Build the patched webkit (release mode):
     `$perl WebKitTools\Scripts\build-webkit --qt --release`
-  # I have been unable to get the `-j4` argument to make to work for me in this build. So if you get it working in practice, rather than theory, please add details here. (e.g. modifying `make` to `make -j4` in webkitdirs.pm should work in theory, but does not work in practice on Windows).
+  # The webkit build takes forever, so if you have more than one CPU on your machine you should use `--makeargs=j4` (for 4 CPUs). This will speed up the build no end. Other recommendations are `--no-svg`. There is even a `--minimal` flag available in recent webkit versions:
+{{{
+    $perl WebKitTools\Scripts\build-webkit --qt --release --makeargs=j4
+    $perl WebKitTools\Scripts\build-webkit --qt --release --no-svg
+    $perl WebKitTools\Scripts\build-webkit --qt --release --minimal
+}}}
 
 
 == Step 4: Build Torora in Qt Creator ==
