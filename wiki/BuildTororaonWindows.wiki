@@ -84,6 +84,7 @@ m4: cannot open `C:\Program': No such file or directory
 m4: cannot open `Files\GnuWin32/share/bison/m4sugar/m4sugar.m4': No such file or directory
 bison: I/O error
 }}}
+  # [http://www.activestate.com/store/download.aspx?prdGUID=81fbce82-6bd5-49bc-a915-08d58c2648ca Download ActivePerl]
   # [http://www.qtsoftware.com/downloads/sdk-windows-cpp Download QT SDK (and QT Creator)]
   # Make sure the GnuWin32 packages are in your PATH as well as Perl (`set PATH=C:\program files\gnuwin32\bin;C:\Perl\site\bin;%PATH%`.
   # You also need to have %QTDIR% set and have %QTDIR%\bin in your PATH.
