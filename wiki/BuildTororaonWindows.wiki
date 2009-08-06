@@ -101,7 +101,7 @@ bison: I/O error
     $perl WebKitTools\Scripts\build-webkit --qt --release --no-svg
     $perl WebKitTools\Scripts\build-webkit --qt --release --minimal
 }}}
-
+  # The safest way to recover fully from build failures is to delete the WebKitBuild folder and build again. 
 
 == Step 4: Build Torora in Qt Creator ==
 
