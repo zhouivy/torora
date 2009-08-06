@@ -82,6 +82,7 @@ set INCLUDE=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\I
   # Open for example a Qt Command Prompt from the Start Menu. `Click Start->Program Files->Qt->QT Command Prompt`
   # Change into the WebKit source tree: `cd c:\location\of\webkit`
   # For some reason, the build command was unable to create the `WebKitBuild\Release` folders by itself on my PC. I had to do `mkdir WebKitBuild` and `mkdir WebKitBuild\Release` before building.
+  # You may need to do a `mkdir c:\tmp`. The WebKit build relies on the existence of `c:\tmp` when building in Windows.
   # Build the patched webkit (release mode):
     `$perl WebKitTools\Scripts\build-webkit --qt --release`
   # I have been unable to get the `-j4` argument to make to work for me in this build. So if you get it working in practice, rather than theory, please add details here. (e.g. modifying `make` to `make -j4` in webkitdirs.pm should work in theory, but does not work in practice on Windows).
