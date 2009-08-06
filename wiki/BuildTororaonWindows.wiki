@@ -14,6 +14,7 @@
    * [http://gnuwin32.sourceforge.net/downlinks/gperf.php GPerf]
    * [http://gnuwin32.sourceforge.net/downlinks/flex.php Flex]
    * [http://gnuwin32.sourceforge.net/downlinks/libiconv.php LibIconv]
+   * [http://gnuwin32.sourceforge.net/downlinks/make.php Make]
   # [http://www.qtsoftware.com/downloads/sdk-windows-cpp QT SDK (and QT Creator)]
   # [http://code.google.com/p/msysgit/ Git for Windows]
   # [http://subversion.tigris.org/getting.html#windows SVN for Windows]
@@ -73,6 +74,7 @@ set INCLUDE=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\I
    * [http://gnuwin32.sourceforge.net/downlinks/gperf.php Download GPerf]
    * [http://gnuwin32.sourceforge.net/downlinks/flex.php Download Flex]
    * [http://gnuwin32.sourceforge.net/downlinks/libiconv.php LibIconv]
+   * [http://gnuwin32.sourceforge.net/downlinks/make.php Make]
   # [http://www.qtsoftware.com/downloads/sdk-windows-cpp Download QT SDK (and QT Creator)]
   # Make sure the GnuWin32 packages are in your PATH as well as Perl (`set PATH=C:\program files\gnuwin32\bin;C:\Perl\site\bin;%PATH%`.
   # You also need to have %QTDIR% set and have %QTDIR%\bin in your PATH.
