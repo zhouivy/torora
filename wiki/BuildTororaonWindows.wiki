@@ -9,7 +9,7 @@
   # [http://msdn.microsoft.com/en-us/library/ms235626(VS.80).aspx Follow steps 2 and 3 of “How to: Use Visual C++ Express Edition with the Microsoft Platform SDK.]
   # [http://www.activestate.com/store/download.aspx?prdGUID=81fbce82-6bd5-49bc-a915-08d58c2648ca ActivePerl]
   # [http://www.openssl.org/source/ OpenSSl]
-  # The following external GNU tools are needed from the GnuWin32 Project:
+  # The following external GNU tools are needed from the GnuWin32 Project (Install to `C:\GnuWin32` rather than `C:\Program Files\GnuWin32` to avoid silly build failures later on):
    * [http://gnuwin32.sourceforge.net/downlinks/bison.php Bison]
    * [http://gnuwin32.sourceforge.net/downlinks/gperf.php GPerf]
    * [http://gnuwin32.sourceforge.net/downlinks/flex.php Flex]
