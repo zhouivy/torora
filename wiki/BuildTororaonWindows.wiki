@@ -86,10 +86,10 @@ bison: I/O error
 }}}
   # [http://www.activestate.com/store/download.aspx?prdGUID=81fbce82-6bd5-49bc-a915-08d58c2648ca Download ActivePerl]
   # [http://www.qtsoftware.com/downloads/sdk-windows-cpp Download QT SDK (and QT Creator)]
+  # Open for example a Qt Command Prompt from the Start Menu. `Click Start->Program Files->Qt->QT Command Prompt`
   # Make sure the GnuWin32 packages are in your PATH as well as Perl (`set PATH=C:\program files\gnuwin32\bin;C:\Perl\site\bin;%PATH%`.
   # You also need to have %QTDIR% set and have %QTDIR%\bin in your PATH.
   # Trim your PATH down as much as possible. Remove Git and Mingw from your PATH if you have them installed, their presence can cause odd build failures. For example, the PATH that works for me is `set Path=C:\Program Files\GnuWin32\bin;c:\Qt\2009.01\qt\bin;c:\Qt\2009.01\bin;C:\Perl\bin;C:\Windows\system32;c:\Qt\2009.01\mingw\bin;C:\Perl\site\bin;C:\Windows;C:\Program Files\SlikSvn\bin\`.
-  # Open for example a Qt Command Prompt from the Start Menu. `Click Start->Program Files->Qt->QT Command Prompt`
   # Change into the WebKit source tree: `cd c:\location\of\webkit`
   # For some reason, the build command was unable to create the `WebKitBuild\Release` folders by itself on my PC. I had to do `mkdir WebKitBuild` and `mkdir WebKitBuild\Release` before building.
   # You may need to do a `mkdir c:\tmp`. The WebKit build relies on the existence of `c:\tmp` when building in Windows.
