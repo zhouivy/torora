@@ -1,6 +1,6 @@
 #summary Building Torora from source.
 
-See BuildTororaOnWindows for instructions on building Torora and WebKit in Windows.
+See BuildTororaonWindows for instructions on building Torora and WebKit in Windows.
 == Requirements ==
 
 Qt 4.5 or later is a strict requirement for building Torora. This is because only Qt 4.5
