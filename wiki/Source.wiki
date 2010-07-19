@@ -12,7 +12,7 @@ doesn't work at all. </b>
 {{{
     $ git clone git://github.com/mwenge/torora.git
     $ cd torora
-    $ qmake "CONFIG-=debug DEFINES+=TORORA" -r
+    $ qmake "CONFIG-=debug" "DEFINES+=TORORA" -r
     $ make
 }}}
 
