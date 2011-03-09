@@ -52,7 +52,7 @@ set INCLUDE=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\I
 }}}
   # If you're lucky, OpenSSL will build without a hitch. If not, you may get a rash of exotic errors. Some errors will require a `nmake clean` to recover from. This didn't work for me, so I ended up having to delete the source folder and start from scratch once or twice.
 
-== Step 2: Fetch Torora Sources, Fetch and Patch Webkit ==
+== Step 2: Fetch Torora Sources, Fetch Webkit ==
 
   # [http://code.google.com/p/msysgit/ Download Git for Windows]
   # [http://subversion.tigris.org/getting.html#windows Download SVN for Windows]
@@ -64,10 +64,8 @@ set INCLUDE=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\I
     $ git clone git://github.com/mwenge/torora.git
     $ svn checkout http://svn.webkit.org/repository/webkit/trunk %HOME%\WebKit
     $ cd %HOME%/WebKit
-    $ patch -p0 < ..\torora\doc\webkit-svn.patch
-}}}
 
-== Step 3: Build Patched Webkit ==
+== Step 3: Build Webkit ==
 
   # The following external GNU tools are needed from the GnuWin32 Project:
    * [http://gnuwin32.sourceforge.net/downlinks/bison.php Download Bison]
