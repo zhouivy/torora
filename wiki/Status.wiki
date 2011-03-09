@@ -62,3 +62,7 @@ http://decloak.net/
 ==Fonts Introspection==
 || *Attack Vector* || *Torbutton*|| *Torora*|| *Since* ||  *Info* || *Test* ||
 || Fonts Introspection || N || N || N/A || https://trac.webkit.org/wiki/Fingerprinting#Fonts || N/A ||
+
+==Geolocation==
+|| *Attack Vector* || *Torbutton*|| *Torora*|| *Since* ||  *Info* || *Test* ||
+|| Geolocation || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#a15.GeoLocation || http://browserspy.dk/geolocation.php ||
