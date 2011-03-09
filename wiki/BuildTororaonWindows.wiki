@@ -64,8 +64,11 @@ set INCLUDE=C:\Program Files\Microsoft Platform SDK for Windows Server 2003 R2\I
     $ git clone git://github.com/mwenge/torora.git
     $ svn checkout http://svn.webkit.org/repository/webkit/trunk %HOME%\WebKit
     $ cd %HOME%/WebKit
+}}}
 
 == Step 3: Build Webkit ==
+
+Check https://trac.webkit.org/wiki/BuildingQtOnWindows for up to date instructions.
 
   # The following external GNU tools are needed from the GnuWin32 Project:
    * [http://gnuwin32.sourceforge.net/downlinks/bison.php Download Bison]
