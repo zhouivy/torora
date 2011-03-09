@@ -8,26 +8,11 @@ and greater support HTTP/HTTPS proxying properly. <b> If you build Torora with v
 of Qt prior to 4.5 you will find that HTTP browsing over Tor works fine, but HTTPS
 doesn't work at all. </b>
 
-== Simple steps to build Torora: ==
-{{{
-    $ git clone git://github.com/mwenge/torora.git
-    $ cd torora
-    $ qmake "CONFIG-=debug" "DEFINES+=TORORA" -r
-    $ make
-}}}
+== Until further notice you should always build Torora against WebKit trunk. ==
 
-== To build Torora against a patched webkit (see [http://github.com/mwenge/torora/tree/master/doc/webkit-patch.spec webkit-patch.spec] and [http://github.com/mwenge/torora/tree/master/doc/DESIGN.torora DESIGN.torora]): ==
+=== Download and build WebKit trunk: ===
 
-=== Patch webkit: ===
-{{{
-    $ cd ~
-    $ svn checkout -r 41182 http://svn.webkit.org/repository/webkit/trunk $HOME/WebKit
-    $ cd $HOME/WebKit
-    $ patch -p0 < /location/of/torora/doc/webkit-Safari-4.1-beta.patch
-    $ ./WebKitTools/Scripts/build-webkit --qt --release
-}}}
-
-Note: Revision 41182 is the revision tagged for the Safari 4 beta.
+Follow the instructions at http://trac.webkit.org/wiki/QtWebKit
 
 === Build Torora: ===
 {{{
@@ -35,7 +20,7 @@ Note: Revision 41182 is the revision tagged for the Safari 4 beta.
     $ cd /path/to/torora/source
     $ cd torora
     $ export QT_WEBKIT=webkit_trunk
-    # WEBKITDIR should be set to the parent directory of WebKitBuild
+    # WEBKITDIR should be set to the parent directory of WebKitBuild in the WebKit you downloaded and built above
     $ export WEBKITDIR=$HOME/WebKit
     $ qmake "CONFIG-=debug" "DEFINES+=TORORA" "DEFINES+=TORORA_WEBKIT_BUILD" -r
     $ make clean
@@ -43,7 +28,7 @@ Note: Revision 41182 is the revision tagged for the Safari 4 beta.
 }}}
 
 === Test/Troubleshoot: ===
-  * Ensure your Torora binary is built against the patched webkit:
+  * Ensure your Torora binary is built against the webkit trunk:
 {{{
 robert@mwenge:~/Development/torora$ ldd torora
         linux-gate.so.1 =>  (0xb7f39000)
@@ -70,13 +55,4 @@ robert@mwenge:~/Development/torora$ ldd torora
         CONFIG(release):WEBKITBUILD = $$WEBKITDIR/WebKitBuild/$$WEBKITBRANCH/Release/lib
         CONFIG(debug):WEBKITBUILD = $$WEBKITDIR/WebKitBuild/$$WEBKITBRANCH/Debug/lib
     }
-}}}
-
-== To build an arora-like with a 'Tor Browsing' toggle option: == 
-
-{{{
-    $ git clone git://github.com/mwenge/torora.git
-    $ cd torora
-    $ qmake "CONFIG-=debug" -r
-    $ make
 }}}
