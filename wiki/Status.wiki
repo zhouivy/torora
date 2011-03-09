@@ -1,0 +1,34 @@
+#summary Status of Attack Vectors in Torora.
+
+= Introduction =
+
+https://trac.webkit.org/wiki/Fingerprinting is the principal reference point here. That document is based on DESIGN.TORORA.
+
+
+=Javascript=
+|| *Attack Vector* || *Torbutton*|| *Torora*|| *Since* ||  Info || Test ||
+||  `Document.referrer` || Y || N || N/A || https://trac.webkit.org/wiki/Fingerprinting#i.DocumentObject || http://browserspy.dk/document.php ||
+||  `history.length` || Y || N || N/A || https://trac.webkit.org/wiki/Fingerprinting#ii.Window.HistoryObject || http://browserspy.dk/document.php ||
+||  `Window` || Y || Y || At least 2e5d3cb685ab5bb663ba793b3b2ca07405f958f8 || https://trac.webkit.org/wiki/Fingerprinting#iii.Windowobject || http://browserspy.dk/window.php ||
+||  `Window.name` || Y || N || N/A || https://trac.webkit.org/wiki/Fingerprinting#iv.Window.name || http://samy.pl/evercookie/ ||
+||  `Screen` || Y || Y || At least 2e5d3cb685ab5bb663ba793b3b2ca07405f958f8 || https://trac.webkit.org/wiki/Fingerprinting#v.Screenobject || http://browserspy.dk/screen.php ||
+||  `Navigator` || Y || Y || At least 2e5d3cb685ab5bb663ba793b3b2ca07405f958f8 || https://trac.webkit.org/wiki/Fingerprinting#vi.NavigatorObject || http://browserspy.dk/browser.php ||
+||  `Date` and Timezone || Y || Y || At least 2e5d3cb685ab5bb663ba793b3b2ca07405f958f8 || https://trac.webkit.org/wiki/Fingerprinting#a.Timezone || http://browserspy.dk/date.php ||
+||  `Date` and Typing Cadence || N || N || N/A || https://trac.webkit.org/wiki/Fingerprinting#b.TimingUsers || None Available ||
+||  `Language` || ? || ? || N/A || https://trac.webkit.org/wiki/Fingerprinting#viii.LanguageObject ||  http://browserspy.dk/language.php ||
+
+=CSS=
+|| *Attack Vector* || *Torbutton*|| *Torora*|| *Since* ||  Info ||
+||  CSS Media Queries || N || N || N/A || https://trac.webkit.org/wiki/Fingerprinting#i.CSSMediaQueries || None available ||
+||  CSS Fonts Introspection || N || N || N/A || https://trac.webkit.org/wiki/Fingerprinting#ii.CSSFonts || http://flippingtypical.com/ ||
+||  CSS History Inspection || Y || Y || At least 2e5d3cb685ab5bb663ba793b3b2ca07405f958f8 || https://trac.webkit.org/wiki/Fingerprinting#iii.QueryingPageHistorywithCSS || http://browserspy.dk/css-exploit.php ||
+
+
+=HTTP Headers=
+|| *Attack Vector* || *Torbutton*|| *Torora*|| *Since* ||  Info || Test ||
+||  User Agent Header || Y || Y || At least 2e5d3cb685ab5bb663ba793b3b2ca07405f958f8 || https://trac.webkit.org/wiki/Fingerprinting#a11.HTTPHeaders || http://browserspy.dk/headers.php ||
+||  Referer and Origin Header || Y || Y || At least 2e5d3cb685ab5bb663ba793b3b2ca07405f958f8 || https://trac.webkit.org/wiki/Fingerprinting#a11.HTTPHeaders || http://browserspy.dk/headers.php ||
+||  Accept-Language Header || Y || Y || At least 2e5d3cb685ab5bb663ba793b3b2ca07405f958f8 || https://trac.webkit.org/wiki/Fingerprinting#a11.HTTPHeaders || http://browserspy.dk/language.php ||
+||  Accept Header || Y || Y || At least 2e5d3cb685ab5bb663ba793b3b2ca07405f958f8 || https://trac.webkit.org/wiki/Fingerprinting#a11.HTTPHeaders || http://browserspy.dk/headers.php ||
+
+
