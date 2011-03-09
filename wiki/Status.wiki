@@ -7,6 +7,7 @@ https://trac.webkit.org/wiki/Fingerprinting is the principal reference point her
 = Good General Tests for Assessing Protection Provided by Torora =
 
 http://samy.pl/evercookie/
+
 http://decloak.net/
 
 =Known Attack Vectors=
