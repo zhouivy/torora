@@ -30,7 +30,7 @@ $ ./Tools/Scripts/build-webkit --qt --makeargs=-j5 --no-video --no-svg
     $ export QT_WEBKIT=webkit_trunk
     # WEBKITDIR should be set to the parent directory of WebKitBuild in the WebKit you downloaded and built above
     $ export WEBKITDIR=$HOME/WebKit
-    $ qmake "CONFIG-=debug" "DEFINES+=TORORA" "DEFINES+=TORORA_WEBKIT_BUILD" -r
+    $ qmake "CONFIG-=debug" "DEFINES+=TORORA" -r
     $ make clean
     $ make
 }}}
