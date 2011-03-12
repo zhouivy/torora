@@ -16,10 +16,10 @@ Follow the instructions at http://trac.webkit.org/wiki/QtWebKit
 
 Quick and dirty for Linux:
 {{{
-$ cd $HOME
-$ git clone git://git.webkit.org/WebKit.git WebKit
-$ cd WebKit
-$ ./Tools/Scripts/build-webkit --qt --makeargs=-j5 --no-video --no-svg
+    $ cd $HOME
+    $ git clone git://git.webkit.org/WebKit.git WebKit
+    $ cd WebKit
+    $ ./Tools/Scripts/build-webkit --qt --makeargs=-j5 --no-video --no-svg
 }}}
 
 === Build Torora: ===
@@ -43,7 +43,6 @@ robert@mwenge:~/Development/torora$ ldd torora
         libQtWebKit.so.4 => /home/robert/Development/WebKit/WebKitBuild/Debug/lib/libQtWebKit.so.4 (0xb5408000)
 }}}
   * The file webkittrunk.pri applies the paths you select, if you built webkit with '--release' then ensure the appropriate section in webkittrunk.pri looks like:
-
 {{{
     isEmpty(WEBKITBRANCH) {
         CONFIG(debug):WEBKITBUILD = $$WEBKITDIR/WebKitBuild/Debug/lib
