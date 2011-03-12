@@ -38,6 +38,7 @@ http://decloak.net/
 ||  Accept-Language Header || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#a11.HTTPHeaders || http://browserspy.dk/language.php ||
 ||  Accept Header || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#a11.HTTPHeaders || http://browserspy.dk/headers.php ||
 ||  HTTP ETags || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#a11.HTTPHeaders || https://trac.webkit.org/wiki/Fingerprinting#v.HTTPETags ||
+||  'Do Not Track' || ? || Y || At least git revision d0d234de || http://datatracker.ietf.org/doc/draft-mayer-do-not-track || http://browserspy.dk/donottrack.php ||
 
 ==Plugins/Java==
 || *Attack Vector* || *Torbutton*|| *Torora*|| *Since* ||  *Info* || *Test* ||
