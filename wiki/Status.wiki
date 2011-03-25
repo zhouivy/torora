@@ -2,7 +2,7 @@
 
 = Introduction =
 
-https://trac.webkit.org/wiki/Fingerprinting is the principal reference point here. That document is based on DESIGN.TORORA.
+[https://trac.webkit.org/wiki/Fingerprinting is the principal reference point here. That document is based on DESIGN.TORORA.
 
 = Good General Tests for Assessing Protection Provided by Torora =
 
@@ -14,56 +14,56 @@ http://decloak.net/
 
 ==Javascript==
 || *Attack Vector* || *Torbutton*|| *Torora*|| *Since* ||  *Info* || *Test* ||
-||  `Document.referrer` || Y || N || N/A || https://trac.webkit.org/wiki/Fingerprinting#i.DocumentObject || http://browserspy.dk/document.php ||
-||  `history.length` || Y || N || N/A || https://trac.webkit.org/wiki/Fingerprinting#ii.Window.HistoryObject || http://browserspy.dk/document.php ||
-||  `Window` || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#iii.Windowobject || http://browserspy.dk/window.php ||
-||  `Window.name` || Y || N || N/A || https://trac.webkit.org/wiki/Fingerprinting#iv.Window.name || http://samy.pl/evercookie/ ||
-||  `Screen` || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#v.Screenobject || http://browserspy.dk/screen.php ||
-||  `Navigator` || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#vi.NavigatorObject || http://browserspy.dk/browser.php ||
-||  `Date` and Timezone || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#a.Timezone || http://browserspy.dk/date.php ||
-||  `Date` and Typing Cadence || N || N || N/A || https://trac.webkit.org/wiki/Fingerprinting#b.TimingUsers || None Available ||
-||  `Language` || ? || ? || N/A || https://trac.webkit.org/wiki/Fingerprinting#viii.LanguageObject ||  http://browserspy.dk/language.php ||
+||  `Document.referrer` || Y || *N* || N/A || [https://trac.webkit.org/wiki/Fingerprinting#i.DocumentObject info] || http://browserspy.dk/document.php ||
+||  `history.length` || Y || *N* || N/A || [https://trac.webkit.org/wiki/Fingerprinting#ii.Window.HistoryObject info] || http://browserspy.dk/document.php ||
+||  `Window` || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#iii.Windowobject info] || http://browserspy.dk/window.php ||
+||  `Window.name` || Y || Y || At least git revision da17daf || [https://trac.webkit.org/wiki/Fingerprinting#iv.Window.name info] || http://roberthogan.net/stuff/window.name/sessvarsTestPage1.html ||
+||  `Screen` || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#v.Screenobject info] || http://browserspy.dk/screen.php ||
+||  `Navigator` || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#vi.NavigatorObject info] || http://browserspy.dk/browser.php ||
+||  `Date` and Timezone || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#a.Timezone info] || http://browserspy.dk/date.php ||
+||  `Date` and Typing Cadence || N || N || N/A || [https://trac.webkit.org/wiki/Fingerprinting#b.TimingUsers info] || None Available ||
+||  `Language` || ? || ? || N/A || [https://trac.webkit.org/wiki/Fingerprinting#viii.LanguageObject info] ||  http://browserspy.dk/language.php ||
 
 ==CSS==
 || *Attack Vector* || *Torbutton*|| *Torora*|| *Since* ||  *Info* || *Test* ||
-||  CSS Media Queries || N || N || N/A || https://trac.webkit.org/wiki/Fingerprinting#i.CSSMediaQueries || None available ||
-||  CSS Fonts Introspection || N || N || N/A || https://trac.webkit.org/wiki/Fingerprinting#ii.CSSFonts || http://flippingtypical.com/ ||
-||  CSS History Inspection || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#iii.QueryingPageHistorywithCSS || http://browserspy.dk/css-exploit.php ||
+||  CSS Media Queries || N || N || N/A || [https://trac.webkit.org/wiki/Fingerprinting#i.CSSMediaQueries info] || None available ||
+||  CSS Fonts Introspection || N || N || N/A || [https://trac.webkit.org/wiki/Fingerprinting#ii.CSSFonts info] || http://flippingtypical.com/ ||
+||  CSS History Inspection || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#iii.QueryingPageHistorywithCSS info] || http://browserspy.dk/css-exploit.php ||
 
 
 ==HTTP Headers==
 || *Attack Vector* || *Torbutton*|| *Torora*|| *Since* ||  *Info* || *Test* ||
-||  User Agent Header || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#a11.HTTPHeaders || http://browserspy.dk/headers.php ||
-||  Referer and Origin Header || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#a11.HTTPHeaders || http://browserspy.dk/headers.php ||
-||  Accept-Language Header || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#a11.HTTPHeaders || http://browserspy.dk/language.php ||
-||  Accept Header || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#a11.HTTPHeaders || http://browserspy.dk/headers.php ||
-||  HTTP ETags || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#a11.HTTPHeaders || https://trac.webkit.org/wiki/Fingerprinting#v.HTTPETags ||
-||  'Do Not Track' || ? || Y || At least git revision d0d234de || http://datatracker.ietf.org/doc/draft-mayer-do-not-track || http://browserspy.dk/donottrack.php ||
+||  User Agent Header || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#a11.HTTPHeaders info] || http://browserspy.dk/headers.php ||
+||  Referer and Origin Header || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#a11.HTTPHeaders info] || http://browserspy.dk/headers.php ||
+||  Accept-Language Header || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#a11.HTTPHeaders info] || http://browserspy.dk/language.php ||
+||  Accept Header || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#a11.HTTPHeaders info] || http://browserspy.dk/headers.php ||
+||  HTTP ETags || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#a11.HTTPHeaders info] || [https://trac.webkit.org/wiki/Fingerprinting#v.HTTPETags ||
+||  'Do Not Track' || ? || Y || At least git revision d0d234de || [http://datatracker.ietf.org/doc/draft-mayer-do-not-track info] || http://browserspy.dk/donottrack.php ||
 
 ==Plugins/Java==
 || *Attack Vector* || *Torbutton*|| *Torora*|| *Since* ||  *Info* || *Test* ||
-||  `Navigator.plugins` || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#InstalledPlugins || N/A ||
-||  Plugins Disabled || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#InstalledPlugins || N/A ||
-||  Java Disabled || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#InstalledPlugins || N/A ||
+||  `Navigator.plugins` || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#InstalledPlugins info] || N/A ||
+||  Plugins Disabled || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#InstalledPlugins info] || N/A ||
+||  Java Disabled || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#InstalledPlugins info] || N/A ||
 
 
 ==Storage==
 || *Attack Vector* || *Torbutton*|| *Torora*|| *Since* ||  *Info* || *Test* ||
-||  Cookies || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#a8.Cookies || http://browserspy.dk/cookie.php http://evercookie.org ||
-||  Third Party Cookies || Y || N || N/A || https://trac.webkit.org/wiki/Fingerprinting#a9.ThirdPartyCookies || http://browserspy.dk/cookie.php ||
-||  Page Cache || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#a10.PageCache || http://evercookie.org ||
-||  DOM Local Storage || Y || ? || Only in private browsing mode || https://trac.webkit.org/wiki/Fingerprinting#a12.DOMLocalStorageDOMSessionStorageDOMGlobalStorage || N/A ||
-||  DOM Global Storage || Y || ? || Only in private browsing mode || https://trac.webkit.org/wiki/Fingerprinting#a12.DOMLocalStorageDOMSessionStorageDOMGlobalStorage || N/A ||
-||  DOM Session Storage || Y || ? || Only in private browsing mode || https://trac.webkit.org/wiki/Fingerprinting#a12.DOMLocalStorageDOMSessionStorageDOMGlobalStorage || N/A ||
+||  Cookies || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#a8.Cookies info] || http://browserspy.dk/cookie.php http://evercookie.org ||
+||  Third Party Cookies || Y || *N* || N/A || [https://trac.webkit.org/wiki/Fingerprinting#a9.ThirdPartyCookies info] || http://browserspy.dk/cookie.php ||
+||  Page Cache || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#a10.PageCache info] || http://evercookie.org ||
+||  DOM Local Storage || Y || Y || At least git revision da17daf  || [https://trac.webkit.org/wiki/Fingerprinting#a12.DOMLocalStorageDOMSessionStorageDOMGlobalStorage info] || N/A ||
+||  DOM Global Storage || Y || Y || At least git revision da17daf  || [https://trac.webkit.org/wiki/Fingerprinting#a12.DOMLocalStorageDOMSessionStorageDOMGlobalStorage info] || N/A ||
+||  DOM Session Storage || Y || Y || At least git revision da17daf  || [https://trac.webkit.org/wiki/Fingerprinting#a12.DOMLocalStorageDOMSessionStorageDOMGlobalStorage info] || N/A ||
 
 ==TLS/SSL Session IDs==
 || *Attack Vector* || *Torbutton*|| *Torora*|| *Since* ||  *Info* || *Test* ||
-||  TLS/SSL Session IDs || Y || ? || N/A || https://trac.webkit.org/wiki/Fingerprinting#SessionIDs || N/A ||
+||  TLS/SSL Session IDs || Y || ? || N/A || [https://trac.webkit.org/wiki/Fingerprinting#SessionIDs info] || N/A ||
 
 ==Fonts Introspection==
 || *Attack Vector* || *Torbutton*|| *Torora*|| *Since* ||  *Info* || *Test* ||
-|| Fonts Introspection || N || N || N/A || https://trac.webkit.org/wiki/Fingerprinting#Fonts || N/A ||
+|| Fonts Introspection || N || N || N/A || [https://trac.webkit.org/wiki/Fingerprinting#Fonts info] || N/A ||
 
 ==Geolocation==
 || *Attack Vector* || *Torbutton*|| *Torora*|| *Since* ||  *Info* || *Test* ||
-|| Geolocation || Y || Y || At least git revision 2e5d3cb || https://trac.webkit.org/wiki/Fingerprinting#a15.GeoLocation || http://browserspy.dk/geolocation.php ||
+|| Geolocation || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#a15.GeoLocation info] || http://browserspy.dk/geolocation.php ||
