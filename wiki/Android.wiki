@@ -1,0 +1,15 @@
+#summary One Day Soon, Torora Might Work on Android!
+
+= It kind of already does. =
+
+This is thanks to the [http://sourceforge.net/p/necessitas/home/ Necessitas SDK].
+
+We have an [https://github.com/mwenge/torora/tree/android android branch].
+
+We even have visual proof that it can run:
+
+http://roberthogan.net/stuff/torora-android.png
+
+= However, there are a couple of things blocking: =
+
+[http://sourceforge.net/p/necessitas/tickets/27/ Android's CA cert bundle is not compatible with Qt] and there is no obvious or easy way to fix that without Ministro/Necessitas or Torora shipping a certificate bundle of its own.
