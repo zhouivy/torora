@@ -2,7 +2,7 @@
 
 = Introduction =
 
-[https://trac.webkit.org/wiki/Fingerprinting is the principal reference point here. That document is based on DESIGN.TORORA.
+[https://trac.webkit.org/wiki/Fingerprinting This page on the WebKit wiki] is the principal reference point here. That document is based on DESIGN.TORORA.
 
 = Good General Tests for Assessing Protection Provided by Torora =
 
