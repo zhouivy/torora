@@ -16,10 +16,10 @@ http://decloak.net/
 || *Attack Vector* || *Torbutton*|| *Torora*|| *Since* ||  *Info* || *Test* ||
 ||  `Document.referrer` || Y || *N* || N/A || [https://trac.webkit.org/wiki/Fingerprinting#i.DocumentObject info] || http://browserspy.dk/document.php ||
 ||  `history.length` || Y || *N* || N/A || [https://trac.webkit.org/wiki/Fingerprinting#ii.Window.HistoryObject info] || http://browserspy.dk/document.php ||
-||  `Window` || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#iii.Windowobject info] || http://browserspy.dk/window.php ||
+||  `Window` || Y || [http://code.google.com/p/torora/issues/detail?id=9 Imperfect] || On Linux, browser resizes to round values. No countermeasures on Windows currently. || [https://trac.webkit.org/wiki/Fingerprinting#iii.Windowobject info] || http://browserspy.dk/window.php ||
 ||  `Window.name` || Y || Y || At least git revision da17daf || [https://trac.webkit.org/wiki/Fingerprinting#iv.Window.name info] || http://roberthogan.net/stuff/window.name/sessvarsTestPage1.html ||
-||  `Screen` || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#v.Screenobject info] || http://browserspy.dk/screen.php ||
-||  `Navigator` || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#vi.NavigatorObject info] || http://browserspy.dk/browser.php ||
+||  `Screen` || Y || Y || At least git revision 2e5d3cb. Requires WebKit trunk. || [https://trac.webkit.org/wiki/Fingerprinting#v.Screenobject info] || http://browserspy.dk/screen.php ||
+||  `Navigator` || Y || Y || At least git revision 2e5d3cb Requires WebKit trunk. || [https://trac.webkit.org/wiki/Fingerprinting#vi.NavigatorObject info] || http://browserspy.dk/browser.php ||
 ||  `Date` and Timezone || Y || Y || At least git revision 2e5d3cb || [https://trac.webkit.org/wiki/Fingerprinting#a.Timezone info] || http://browserspy.dk/date.php ||
 ||  `Date` and Typing Cadence || N || N || N/A || [https://trac.webkit.org/wiki/Fingerprinting#b.TimingUsers info] || None Available ||
 ||  `Language` || ? || ? || N/A || [https://trac.webkit.org/wiki/Fingerprinting#viii.LanguageObject info] ||  http://browserspy.dk/language.php ||
