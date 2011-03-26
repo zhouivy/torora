@@ -12,9 +12,9 @@
 
 == Download and Install Necessitas SDK ==
 
-  *[http://sourceforge.net/p/necessitas/wiki/How%20to%20install%20Necessitas%20SDK/ Download and Install Necessitas]
-  *[http://sourceforge.net/p/necessitas/wiki/Setup%20QtCreator/ Set up the Necessitas SDK for compiling]
-  *[http://sourceforge.net/p/necessitas/wiki/How%20to%20write%20Qt%20apps%20for%20Android/ Read the general set up advice for compiling Qt apps for Android]
+  * [http://sourceforge.net/p/necessitas/wiki/How%20to%20install%20Necessitas%20SDK/ Download and Install Necessitas]
+  * [http://sourceforge.net/p/necessitas/wiki/Setup%20QtCreator/ Set up the Necessitas SDK for compiling]
+  * [http://sourceforge.net/p/necessitas/wiki/How%20to%20write%20Qt%20apps%20for%20Android/ Read the general set up advice for compiling Qt apps for Android]
 
 == Set up Torora to Build on Necessitas ==
   * Open the torora.pro project file from the downloaded source.
