@@ -8,7 +8,7 @@ We have an [https://github.com/mwenge/torora/tree/android android branch].
 
 We even have visual proof that it can run:
 
-http://roberthogan.net/stuff/torora-android.png
+http://roberthogan.net/images/torora-android.png
 
 = However, there are a couple of things blocking: =
 
