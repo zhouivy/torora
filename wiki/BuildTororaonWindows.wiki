@@ -102,9 +102,9 @@ set Path=`C:\GnuWin32\bin;C:\Program Files\GnuWin32\bin;c:\Qt\2009.01\qt\bin;c:\
     `$perl WebKitTools\Scripts\build-webkit --qt --release`
   # The webkit build takes forever, so if you have more than one CPU on your machine you should use `--makeargs=j4` (for 4 CPUs). This will speed up the build no end. Other recommendations are `--no-svg`. There is even a `--minimal` flag available in recent webkit versions:
 {{{
-    $perl WebKitTools\Scripts\build-webkit --qt --release --makeargs=j4
-    $perl WebKitTools\Scripts\build-webkit --qt --release --no-svg
-    $perl WebKitTools\Scripts\build-webkit --qt --release --minimal
+    $perl Tools\Scripts\build-webkit --qt --release --makeargs=j4
+    $perl Tools\Scripts\build-webkit --qt --release --no-svg
+    $perl Tools\Scripts\build-webkit --qt --release --minimal
 }}}
   # The safest way to recover fully from build failures is to delete the WebKitBuild folder and build again. 
 
